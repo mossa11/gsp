@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+             margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+       body{
+        width: 100%;
+      /*  overflow: hidden;*/
+       }
+       /* navbar styling */
+       nav{
+        height: 10vh;
+        background-color: cadetblue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       }
+       nav ul{
+        list-style: none;
+       }
+       nav a{
+        text-decoration: none;
+        color: white; 
+        padding: 0 1vw;
+        cursor: pointer;
+       }
+
+       /* hero section styling */
+       main{
+        background: linear-gradient(rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.45)), url(./image\ copy.png) no-repeat center/cover;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        gap: 10vw;
+        justify-content: space-around;
+       }
+       .opts{
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+        font-family: sans-serif;
+        color: white;
+        background-color: caet;
+       }
+       .opts div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 15vh;
+        width: 20vw;
+        text-align: center;
+        font-size: 18pt;
+        font-weight: bolder;
+        background-color: cadetblue;
+        border-radius: 8vw;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+       }
+       .opts div:hover{
+        background-color: white;
+        color: cadetblue;
+        box-shadow: khaki 0px 0px 10px 5px;
+       }
+       .contactus {
+        width: 30vw;
+        height: 80vh;
+        background-color: white;
+        border-radius: 1vw;
+        border: khaki solid 0.5vw ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+        text-align: center;
+        gap: 2vh;
+       }
+       .contactus h3{
+        margin-bottom: 3vh;
+        color: cadetblue;
+       }
+       form {
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+       }
+
+       .producthead{
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        font-family: sans-serif;
+       }
+       .products{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5vh;
+        padding: 10vh 3vw;
+       }
+         .boxcontent{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 2vh;
+          width: 40vh;
+          height: 50vh;
+          padding: 2vh;
+          text-align: center;
+          border-radius: 1vw;
+          box-shadow: cadetblue 0px 0px 10px 5px;
+         }
+         .boxcontent button{
+            padding: 1vh 2vw;
+            border: none;
+            background-color: rgb(37, 60, 61);
+            color: rgb(255, 244, 144);
+            font-size: 13pt;
+            font-weight: bold;
+            border-radius: 8vw;
+            cursor: pointer;
+         }
+       .imgbx{
+        width: 40vh;
+        background-color: khaki;
+        overflow: hidden;
+       }
+       img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+       }
+       /* media query  */
+       @media screen and (max-width: 860px) {
+        main{
+            padding: 5vh 0;
+            flex-direction: column;
+             gap: 5vh;
+        }
+        .contactus{
+            width: 80vw;
+            height: 55vh;
+        }
+        .opts div{
+            height: 10vh;
+            width: 60vw ;
+            font-size: 14pt;
+            border-radius: 20vw;
+        }
+        .boxcontent{
+          width: 70vw;
+          height: 40vh;
+         }
+             .imgbx{
+        width: 100%;
+        overflow: hidden;
+       }
+       }
+    </style>
+</head>
+<body>
+    <!-- the container holding the website -->
+    <div class="fullcontainer">
+        <!-- the navigation bar -->
+        <nav>
+            <ul>
+            <li>
+                <a href="">Home</a>
+                <a href="">Products</a>
+                <a href="">Contact</a>
+            </li>
+            </ul>
+        </nav>
+        <!-- the hero section -->
+         <main>
+            <section class="opts">
+                <div>
+                    <p>About Us</p>
+                </div>
+                <div>
+                    <p>Our Products</p>
+                </div>
+            </section>
+             <section class="contactus">
+                <h1>Have questions or feedback?</h1>
+                <h3>Contact us!</h3>
+                <div class="contactbody">
+                    <form action="">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5"></textarea>
+                    </form>
+                </div>
+            </section>
+         </main>
+         <!-- the product section -->
+          <section class="producthead">
+            <h1>Some of Our Products:</h1>
+          </section>
+        <section class="products">
+            <div class="boxcontent"><div class="imgbx"><img src="./image copy 2.png" alt=""></div>
+                <div class="content">
+                    <h2>Product 1</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+                </div>
+                <button>Buy Now</button>
+        </div>
+            <div class="boxcontent"><div class="imgbx"><img src="./image copy 3.png" alt=""></div>
+                <div class="content">
+                    <h2>Product 2</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+                </div>
+                <button>Buy Now</button>
+            </div>
+            <div class="boxcontent"><div class="imgbx"><img src="./image copy 4.png" alt=""></div>
+                <div class="content">
+                    <h2>Product 3</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+                </div>
+                <button>Buy Now</button>
+            </div>
+            <div class="boxcontent"><div class="imgbx"><img src="./image copy 5.png" alt=""></div>
+                <div class="content">
+                    <h2>Product 4</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+                </div>
+                <button>Buy Now</button>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
